@@ -1,14 +1,12 @@
 package com.talento_tech.proyecto_final.services;
 
 import com.talento_tech.proyecto_final.entities.Banco;
-
-import java.util.List;
-import java.util.Optional;
+import org.springframework.http.ResponseEntity;
 
 public interface BancoService {
-    List<Banco> retrieve (String nombreBanco);
-    Optional<Banco> retieveId(Long id);
-    Banco save (Banco banco);
-    Banco update (Banco bancoDb, Banco banco);
-    void deleteId (Long id);
+    ResponseEntity<?> retrieve (String nombreBanco);
+    ResponseEntity<?> retrieveId(Long id);
+    ResponseEntity<?> save (Banco banco);
+    ResponseEntity<?> update (Banco banco);
+    ResponseEntity<?> deleteId (Long id);
 }
