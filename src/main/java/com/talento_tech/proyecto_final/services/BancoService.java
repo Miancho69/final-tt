@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface BancoService {
-    List<Banco> retrieve (String containing);
+    List<Banco> retrieve (String nombreBanco);
     Optional<Banco> retieveId(Long id);
     Banco save (Banco banco);
     Banco update (Banco bancoDb, Banco banco);
