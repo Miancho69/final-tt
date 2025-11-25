@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: proyecto-final
+  profiles:
+    active: h2
+server:
+  port: 9000

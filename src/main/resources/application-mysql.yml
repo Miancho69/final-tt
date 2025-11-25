@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: db-mysql
+  datasource:
+    url: jdbc:mysql://localhost:3306/DB_NAME
+    username: root
+    password: ROOT_PASSWORD
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000
+      connection-timeout: 30000
+      pool-name: HikariPoolMySQL
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
