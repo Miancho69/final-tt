@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +26,7 @@ public class BancoServiceImpl implements BancoService {
 
 
     @Override
+    @Transactional(readOnly = true)
     public ResponseEntity<?> retrieve(String nombreBanco) {
         List<Banco> bancos = new ArrayList<>();
 
@@ -45,6 +47,7 @@ public class BancoServiceImpl implements BancoService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public ResponseEntity<?> retrieveId(Long id) {
         if (id > 0) {
             Optional<Banco> optBanco = repository.findById(id);
@@ -64,6 +67,7 @@ public class BancoServiceImpl implements BancoService {
     }
 
     @Override
+    @Transactional
     public ResponseEntity<?> save(Banco banco) {
         if (isValid(banco)) {
             banco.setBanco(banco.getBanco().toUpperCase());
@@ -81,6 +85,7 @@ public class BancoServiceImpl implements BancoService {
     }
 
     @Override
+    @Transactional
     public ResponseEntity<?> update(Banco banco) {
         if (banco.getBancoId() > 0) {
             Optional<Banco> optBanco = repository.findById(banco.getBancoId());
@@ -119,6 +124,7 @@ public class BancoServiceImpl implements BancoService {
     }
 
     @Override
+    @Transactional
     public ResponseEntity<?> deleteId(Long id) {
         Optional<Banco> optBanco = repository.findById(id);
 
