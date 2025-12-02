@@ -3,7 +3,7 @@ Proyecto final para TalentoTech
 
 Damian Caputo
 
-CRUD de una tabla llamada BANCOS
+CRUD de una tabla que contiene los BANCOS aprobados por el BCRA
 
 Soportado por BBDD H2
 
