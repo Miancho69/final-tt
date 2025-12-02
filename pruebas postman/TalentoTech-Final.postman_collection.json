@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "0667c7cc-8c97-4d80-8b46-2c5265872f8a",
+		"name": "TalentoTech-Final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49895399",
+		"_collection_link": "https://damiancaputo-5641312.postman.co/workspace/Team's-Workspace~5b38a1f7-eb65-4bd5-847d-2922a28f50f6/collection/49895399-0667c7cc-8c97-4d80-8b46-2c5265872f8a?action=share&source=collection_link&creator=49895399"
+	},
+	"item": [
+		{
+			"name": "Bancos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/bancos",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"bancos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Banco por nombre",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/bancos?nombreBanco=SAN",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"bancos"
+					],
+					"query": [
+						{
+							"key": "nombreBanco",
+							"value": "SAN"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Banco",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"banco\": \"prueba\",\r\n    \"codigoBCRA\": 99999,\r\n    \"cuit\": \"30\",\r\n    \"ordenListado\": 99999\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/bancos",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"bancos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Banco por Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:9000/api/bancos/5",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"bancos",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Banco",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"banco\": \"pruebita 88\",\r\n    \"bancoId\": 0,\r\n    \"codigoBCRA\": 99998,\r\n    \"cuit\": \"302569874518\",\r\n    \"ordenListado\": 9999987\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/bancos",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"bancos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Banco",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/api/bancos/65",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"bancos",
+						"65"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

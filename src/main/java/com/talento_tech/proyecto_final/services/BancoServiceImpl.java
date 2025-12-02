@@ -31,7 +31,7 @@ public class BancoServiceImpl implements BancoService {
         List<Banco> bancos = new ArrayList<>();
 
         if (!nombreBanco.isBlank()) {
-            bancos = repository.findByBancoContaining(nombreBanco);
+            bancos = repository.findByBancoContainingIgnoreCase(nombreBanco);
         } else {
             bancos = repository.findAll();
         }
